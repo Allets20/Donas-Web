@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qui'Dona - Donas Deliciosas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Encabezado con logo -->
+  <header>
+    <div class="logo">
+      <img src="img/logodequi'donasinfondo.png" alt="Logo Qui'Dona">
+      <h1>Qui'Dona</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#reseñas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <h2>Descubre nuestras donas más populares</h2>
+    <p>Endulza tu día con el sabor único que te ofrecemos aquí en: Qui'Dona</p>
+    <img src="img/pruebaimagen1.jpg" alt="Donas principales">
+  </section>
+
+  <!-- Productos -->
+  <section id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="productos-grid">
+      <div class="producto">
+        <img src="img/pruebaimagen2.jpg" alt="Dona clásica">
+        <h3>Dona Clásica</h3>
+        <p>La tradicional, suave y deliciosa, cubierta de azúcar glas.</p>
+        <span class="precio">S/ 3.00</span>
+        <button onclick="agregarCarrito('Dona Clásica', 3)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/pruebaimagen3.jpg" alt="Dona de chocolate">
+        <h3>Dona de Chocolate</h3>
+        <p>Suave masa cubierta con chocolate cremoso irresistible.</p>
+        <span class="precio">S/ 3.00</span>
+        <button onclick="agregarCarrito('Dona de Chocolate', 3)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="img/pruebaimagen4.jpg" alt="Dona rellena">
+        <h3>Dona Rellena</h3>
+        <p>Rellena de crema pastelera y espolvoreada con azúcar.</p>
+        <span class="precio">S/ 3.00</span>
+        <button onclick="agregarCarrito('Dona Rellena', 3)">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reseñas -->
+  <section id="reseñas">
+    <h2>Reseñas de Nuestros Clientes</h2>
+    <form id="formReseña">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <textarea id="comentario" placeholder="Escribe tu reseña" required></textarea>
+      <label>Calificación: </label>
+      <select id="estrellas" required>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="1">⭐</option>
+      </select>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="listaReseñas"></div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Escríbenos directamente en WhatsApp o síguenos en nuestras redes sociales.</p>
+    <div class="contacto-links">
+      <a href="https://wa.me/51967678006" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://instagram.com/qui.donaa" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://tiktok.com/@qui.donaa" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
+    </div>
+  </section>
+
+  <!-- Carrito -->
+  <div id="carrito">
+    <h3>Carrito</h3>
+    <ul id="listaCarrito"></ul>
+    <p>Total: S/ <span id="total">0.00</span></p>
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
