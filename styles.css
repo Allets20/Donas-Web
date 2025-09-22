@@ -80,8 +80,12 @@ header nav ul li a {
 }
 
 .producto img {
-  max-width: 100%;
-  border-radius: 8px;
+  width: 320px;        /* ancho fijo */
+  height: 300px;       /* alto fijo */
+  object-fit: cover;   /* recorta sin deformar */
+  border-radius: 10px; /* opcional, bordes redondeados */
+  display: block;      /* elimina espacios raros */
+  margin: 0 auto;      /* centra dentro del contenedor */
 }
 
 .producto button {
@@ -146,3 +150,5 @@ header nav ul li a {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   width: 250px;
 }
+
+
